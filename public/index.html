@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel = "shortcut icon" href="https://crsorgi.gov.in/web/images//favicon.ico"/>
+  <title>Civil Registration System</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+    }
+
+    #image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    #image-container img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      margin-top: -5.2rem;
+    }
+
+    .button button {
+      background: url(/btn-bg.gif) repeat-x;
+      border: none;
+      width: 12.5rem;
+      height: 22px;
+    }
+
+    .print {
+      margin-right: 3%;
+    }
+
+    .home {
+      margin-left: 3%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="image-container">
+    <img src="/pic01.jpg">
+  </div>
+  <div class="button">
+    <button class="print" onclick="downloadPDF()">Print</button>
+    <button class="home">Home</button>
+  </div>
+
+  <script>
+  function downloadPDF() {
+      var link = document.createElement('a');
+      link.setAttribute('href', 'mpdf.pdf');
+      link.download = 'mpdf.pdf';
+      link.click();
+    }
+  </script>
+</body>
+
+</html>
