@@ -9,7 +9,7 @@ const port = process.env.PORT || 8000;
 
 app.use(express.static('public'))
 
-app.get("/web/index.php/auth/birthCertificate/view/cert/B/WyUVEEEkjhHjhHFJko%3D%3D",async (req,res) => {
+app.get("/web/index.php/auth/deathCertificate/view/cert/D/OWtNUTJQZDfjheD5jklHGntdbvjbhsgbmghb6URbhj%3D",async (req,res) => {
     const file = path.join(path.resolve(path.dirname('')),'public','index.html');
     res.sendFile(file);
 })
